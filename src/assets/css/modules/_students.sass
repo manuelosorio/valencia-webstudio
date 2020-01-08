@@ -1,0 +1,78 @@
+/*----------------------  Students  ----------------------
+.students
+  margin: 0 auto
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  ol
+    columns: 4
+    li
+      margin-bottom: 1.2rem
+  header
+    display: flex
+    width: 100%
+    flex-direction: column
+    +pixel(bottom)
+    h1
+      display: flex
+      flex-direction: column
+      position: relative
+      font: $regular $fontSizeSm $loRes9Wide
+      em
+        font: $bold 2rem $loRes9Wide
+
+  article
+    + article
+      margin-top: 2rem
+    h1
+      display: flex
+      flex-direction: row
+      position: relative
+      margin-bottom: 1rem
+      font: $bold $fontSizeMd $loRes9Wide
+      Strong
+        font: $bold $fontSizeMd $loRes9Wide
+      span
+        font: $bold $fontSizeMd $loRes9Wide
+        // margin-top: .5rem
+    h2
+      margin: 0
+      font: $regular $fontSizeSm $loRes9Wide
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+  section
+    display: flex
+    +createBorder()
+    flex-direction: column
+    position: relative
+    padding: 1.25rem .5rem 1.25rem 1.50rem
+    // padding: 1rem
+    width: 100%
+    + section
+      margin-top: 1rem
+    @media screen and (min-width: $medium)
+      width: 43%
+      + section
+        margin-top: 0
+        margin-left: 1rem
+        &:last-child
+          margin-top: 1rem
+          margin-left: 0
+    @media screen and (min-width: $large)
+      width: 26%
+      + section:last-child
+        margin-top: 0
+        margin-left: 1rem
+  h1
+    span
+    display: initial
+  section
+    +pixel(top)
+    &, h2
+      +pixel()
+  h2
+    +pixel(bottom)
+h2 + h1
+  margin: 0
+/*----------------------  End Students  ----------------------

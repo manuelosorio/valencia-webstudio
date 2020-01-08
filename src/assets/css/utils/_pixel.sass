@@ -1,0 +1,30 @@
+@mixin pixel($arg:null)
+  @if $arg == top
+    &:before
+      top: -6px
+      left: -6px
+    &:after
+      top: -6px
+      right: -6px
+  @if $arg == altTop
+    &:before
+      top: 0
+      left: 0
+    &:after
+      top: 0
+      right: 0
+  @if $arg == bottom
+    &:before
+      bottom: -6px
+      left: -6px
+    &:after
+      bottom: -6px
+      right: -6px
+  @if $arg == null
+    &:before, &:after
+      content: ""
+      +size(6px)
+      background: $background
+      background-size: cover
+      position: absolute
+      z-index: 1

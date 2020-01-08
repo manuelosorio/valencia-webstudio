@@ -1,0 +1,69 @@
+#logo a
+  font: $bold 2.5rem $loRes9Wide
+  text-align: center
+
+
+.content div
+  h1
+    // text-align: center
+    font-size: 3.75rem
+    margin: 5rem 0
+  a
+    font-size: 1.25rem
+    + a
+      margin-left: 2rem
+.page404
+  .page-wrapper
+    justify-content: center
+    align-items: center
+  .content div h1
+    text-align: center
+    + a
+      display: inline-block
+      text-align: center
+      width: 33%
+      padding: 1rem
+      margin: 1rem
+      background: $yellow
+      position: relative
+      +createBorder($yellow)
+      +pixel(bottom)
+      span
+        +pixel(top)
+      &, span
+        +pixel()
+      &:hover
+        background: $yellow-dark
+        color: darken($white, 10%)
+        +createBorder()
+  a + a
+    position: relative
+    top: -0.5rem
+.content:not(.students)
+
+  article
+    display: flex
+    flex-direction: column
+    width: 100%
+    + article
+      margin-top: 2%
+    @media screen and (min-width: $medium)
+      float: left
+      width: 46%
+      + article
+        margin-top: 0
+        margin-left: 2%
+    h1
+      display: block
+      width: 100%
+    ul
+      display: flex
+      position: relative
+      padding: 1rem
+      justify-content: space-evenly
+      +createBorder()
+      +pixel(top)
+      li:first-child
+        +pixel(bottom)
+      &, li:first-child
+        +pixel()
